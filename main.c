@@ -16,7 +16,7 @@ int main(int argc, char **argv){
         char filename [256];
         printf("Choose a directory: ");
         fgets(filename, sizeof(filename), stdin);
-        *strchr(filename, '\n') = 0; // replace any \n char with 0
+        *strchr(filename, '\n') = 0; // replace \n char with terminating 0
         dir = opendir(filename);
     }
     if (dir == NULL){ // in case something went wrong when opening
