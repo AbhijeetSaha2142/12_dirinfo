@@ -12,7 +12,7 @@ int main(int argc, char **argv){
         dir = opendir(argv[1]);
     }
 
-    else{ // otherwise ask for directory through stdin
+    else { // otherwise ask for directory through stdin
         char filename [256];
         printf("Choose a directory: ");
         fgets(filename, sizeof(filename), stdin);
