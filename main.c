@@ -11,7 +11,7 @@ int main(int argc, char **argv){
     if (argc != 1){ // if given command line arg for directory open that
         dir = opendir(argv[1]);
     }
-    
+
     else{ // otherwise ask for directory through stdin
         char filename [256];
         printf("Choose a directory: ");
@@ -49,7 +49,6 @@ int main(int argc, char **argv){
     printf("Regular files:\n");
     while(item){
         if (item->d_type == DT_REG){
-            stat(item->d_name, &meta);
             printf("\t%s\n", item->d_name);
         }
         item = readdir(dir);
