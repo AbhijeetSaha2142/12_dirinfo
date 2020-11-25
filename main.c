@@ -21,6 +21,7 @@ int main(int argc, char **argv){
     }
     if (dir == NULL){ // in case something went wrong when opening
         printf("errno: %d\terror: %s\n", errno, strerror(errno));
+        return -1;
     }
     int size = 0;
     struct dirent *item = readdir(dir);
